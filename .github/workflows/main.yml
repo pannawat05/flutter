@@ -24,11 +24,11 @@ jobs:
           mkdir -p android/app/src/main/assets/public
           cp -r web/* android/app/src/main/assets/public/
 
-      - name: Set up JDK 17 (For Android Build)
+      - name: Set up JDK 21 (For Android Build)
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
-          java-version: '17'
+          java-version: '21' # ขยับขึ้นเป็น Java 21 ให้ตรงใจ Gradle ตัวท็อป
 
       - name: Build APK with Gradle
         run: |
